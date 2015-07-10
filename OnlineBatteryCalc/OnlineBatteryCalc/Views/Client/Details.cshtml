@@ -1,0 +1,95 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Client";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="panel-heading"></div>
+<div class="panel-body">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Замовник: XXX</a>
+                    @*<a href="@Url.Action("Edit", "ElectronicDocuments", new {id = Model.Id})" role="button" class="btn btn-default btn-sm" id="edit" title="Редагувати" style="color: #333" @(Model.IsDeleted && Model.ParentIsDeleted ? "disabled=\"disabled\"" : string.Empty)>
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </a>*@
+                </h3>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <form class="form-inline">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label>Назва:</label>
+                            </div>
+                            <div class="col-md-2">
+                                @*@Html.DisplayFor(model => model.ClientCode)*@
+                            </div>
+                            <div class="col-md-2">
+                                <label>Тип власності:</label>
+                            </div>
+                            <div class="col-md-2">
+                                @*@Html.DisplayFor(model => model.OrgUnitName)*@
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <label>Адреса:</label>
+                            </div>
+                            <div class="col-md-5">
+                                @*@Html.DisplayFor(model => model.DocumentTypeName)*@
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label>Контактний телефон:</label>
+                            </div>
+                            <div class="col-md-2">
+                                @*@Html.DisplayFor(model => model.Number)*@
+                            </div>
+                            <div class="col-md-2">
+                                <label>Електронна адреса:</label>
+                            </div>
+                            <div class="col-md-2">
+                                @*@Html.DisplayFor(model => model.Date)*@
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <label>Коментар:</label>
+                            </div>
+                            <div class="col-md-11">
+                                @*@Html.DisplayFor(x => x.Comment)*@
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        &nbsp;
+    </div>
+    <div class="panel-group" id="accordion1">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo">Замовлення</a>
+                    @*<a href="@Url.Action("Edit", "ElectronicDocuments", new {id = Model.Id})" role="button" class="btn btn-default btn-sm" id="edit" title="Редагувати" style="color: #333" @(Model.IsDeleted && Model.ParentIsDeleted ? "disabled=\"disabled\"" : string.Empty)>
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </a>*@
+                </h3>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <form class="form-inline">
+                        <h3>Список замовлень</h3>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

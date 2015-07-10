@@ -1,0 +1,167 @@
+﻿@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="panel panel-default">
+    <div class="panel-heading">Клієнт: XXX, замовлення на суму: 111 грн</div>
+    <div class="panel-body">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Реквізити</a>
+                        @*<a href="@Url.Action("Edit", "ElectronicDocuments", new {id = Model.Id})" role="button" class="btn btn-default btn-sm" id="edit" title="Редагувати" style="color: #333" @(Model.IsDeleted && Model.ParentIsDeleted ? "disabled=\"disabled\"" : string.Empty)>
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </a>*@
+                    </h3>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <form class="form-inline">
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <label>Замовник:</label>
+                                </div>
+                                <div class="col-md-5">
+                                    @*@Html.DisplayFor(model => model.ClientCode)*@
+                                </div>
+                                <div class="col-md-1">
+                                    <label>Тип власності замовника:</label>
+                                </div>
+                                <div class="col-md-5">
+                                    @*@Html.DisplayFor(model => model.OrgUnitName)*@
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <label>Адреса об'єкту:</label>
+                                </div>
+                                <div class="col-md-5">
+                                    @*@Html.DisplayFor(model => model.DocumentTypeName)*@
+                                </div>
+                                <div class="col-md-1">
+                                    <label>Тип розрахунку:</label>
+                                </div>
+                                <div class="col-md-5">
+                                    @*@Html.DisplayFor(model => model.NonResidentName)*@
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <label>Контактний телефон:</label>
+                                </div>
+                                <div class="col-md-2">
+                                    @*@Html.DisplayFor(model => model.Number)*@
+                                </div>
+                                <div class="col-md-1">
+                                    <label>Електронна адреса:</label>
+                                </div>
+                                <div class="col-md-2">
+                                    @*@Html.DisplayFor(model => model.Date)*@
+                                </div>
+                                <div class="col-md-1">
+                                    <label>Дата замовлення:</label>
+                                </div>
+                                <div class="col-md-5">
+                                    @*@Html.DisplayFor(model => model.ExpireDate)*@
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <label>Коментар:</label>
+                                </div>
+                                <div class="col-md-11">
+                                    @*@Html.DisplayFor(x => x.Comment)*@
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            &nbsp;
+        </div>
+        <div class="panel-group" id="accordion2">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">Приміщення</a>
+                        @*<a href="@Url.Action("Edit", "ElectronicDocuments", new {id = Model.Id})" role="button" class="btn btn-default btn-sm" id="edit" title="Редагувати" style="color: #333" @(Model.IsDeleted && Model.ParentIsDeleted ? "disabled=\"disabled\"" : string.Empty)>
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </a>*@
+                    </h3>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <form class="form-inline">
+                            <h2>Список приміщень</h2>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            &nbsp;
+        </div>
+        <div class="panel-group" id="accordion3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion3" href="#collapseThree">Розрахунок</a>
+                        @*<a href="@Url.Action("Edit", "ElectronicDocuments", new {id = Model.Id})" role="button" class="btn btn-default btn-sm" id="edit" title="Редагувати" style="color: #333" @(Model.IsDeleted && Model.ParentIsDeleted ? "disabled=\"disabled\"" : string.Empty)>
+                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                        </a>*@
+                    </h3>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <form class="form-inline">
+                            <table style="border-style: dotted; border-color: darkgray; border: 2px">
+                                <tr>
+                                    <td>
+                                         
+                                    </td>
+                                    <td style="width: 80px; border-color: darkgray; border: 2px">
+                                        <label>Ціна за од.</label>
+                                    </td>
+                                    <td style="width: 80px">
+                                        <label>Кількість</label>
+                                    </td>
+                                    <td style="width: 150px">
+                                        <label>Вартість</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label>Модулів управління, од</label></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Секцій радіаторів*, од</label></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Збірка, тестування, од</label></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><label>Монтажні роботи**, л/г</label></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
